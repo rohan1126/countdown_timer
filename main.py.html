@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">time</span>
+<span class="s0">from </span><span class="s1">tkinter </span><span class="s0">import </span><span class="s1">*</span>
+
+<span class="s0">def </span><span class="s1">timer():</span>
+
+    <span class="s1">instance = int(input.get())</span>
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range(instance</span><span class="s0">,</span><span class="s2">0</span><span class="s0">,</span><span class="s1">-</span><span class="s2">1</span><span class="s1">):</span>
+        <span class="s1">print(i)</span>
+        <span class="s1">countdown[</span><span class="s3">&quot;text&quot;</span><span class="s1">] = i</span>
+        <span class="s1">window.update()</span>
+        <span class="s1">time.sleep(</span><span class="s2">1</span><span class="s1">)</span>
+    <span class="s1">print(</span><span class="s3">&quot;TIMES UP!&quot;</span><span class="s1">)</span>
+    <span class="s1">countdown[</span><span class="s3">&quot;text&quot;</span><span class="s1">] = (</span><span class="s3">&quot;Times Up!&quot;</span><span class="s1">)</span>
+    <span class="s1">window.update()</span>
+
+
+<span class="s1">window = Tk()</span>
+<span class="s1">window.title(</span><span class="s3">&quot;Timer&quot;</span><span class="s1">)</span>
+<span class="s1">window.config(padx=</span><span class="s2">20</span><span class="s0">, </span><span class="s1">pady=</span><span class="s2">20</span><span class="s1">)</span>
+
+<span class="s1">time_label = Label(text =</span><span class="s3">&quot;Please enter time in seconds &quot;</span><span class="s0">, </span><span class="s1">font=(</span><span class="s3">&quot;Arial&quot;</span><span class="s0">,</span><span class="s2">12</span><span class="s1">) )</span>
+<span class="s1">time_label.pack()</span>
+
+<span class="s1">input = Entry(width=</span><span class="s2">10</span><span class="s1">)</span>
+<span class="s1">input.pack()</span>
+
+<span class="s1">start_button = Button(text=</span><span class="s3">&quot;Start&quot;</span><span class="s0">, </span><span class="s1">command=timer)</span>
+<span class="s1">start_button.pack()</span>
+
+<span class="s1">countdown = Label(text=</span><span class="s2">0</span><span class="s0">, </span><span class="s1">font=(</span><span class="s3">&quot;Arial&quot;</span><span class="s0">,</span><span class="s2">12</span><span class="s1">))</span>
+<span class="s1">countdown.pack()</span>
+
+
+<span class="s4"># def timer ():</span>
+<span class="s4">#     current_time = time.time()</span>
+<span class="s4">#     print(current_time)</span>
+<span class="s4">#</span>
+<span class="s4">#</span>
+<span class="s4"># #     local_time = time.ctime(current_time)</span>
+<span class="s4"># #</span>
+<span class="s4"># #     print(&quot;The local time is:&quot;, local_time)</span>
+<span class="s4"># #</span>
+<span class="s4"># # while(True):</span>
+<span class="s4"># #     timer()</span>
+<span class="s4"># #     time.sleep(5)</span>
+<span class="s4">#</span>
+<span class="s4">#</span>
+<span class="s4"># clock = int(input(&quot;How many seconds&quot;))</span>
+<span class="s4">#</span>
+<span class="s4"># for i in range(clock,0,-1):</span>
+<span class="s4">#     print(i)</span>
+<span class="s4">#     time.sleep(1)</span>
+<span class="s4">#</span>
+<span class="s4"># print(&quot;TIMES UP!&quot;)</span>
+<span class="s4">#</span>
+
+<span class="s1">window.mainloop()</span>
+</pre>
+</body>
+</html>
